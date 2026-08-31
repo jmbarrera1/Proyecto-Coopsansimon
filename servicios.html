@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios | Coop San Simón</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandGreen: '#007A33',
+            brandBrown: '#AD6433',
+            brandYellow: '#F3E600',
+            brandBg: '#F8FAFC'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brandBg font-sans text-gray-800">
+
+  <!-- Navbar Standard -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+      <a href="index.html" class="flex items-center space-x-2">
+        <div class="w-10 h-10 bg-brandGreen rounded-full flex items-center justify-center text-white font-bold text-xl">S</div>
+        <span class="text-xl font-extrabold text-brandGreen">Coop San Simón</span>
+      </a>
+      <nav class="hidden md:flex space-x-8 font-medium text-gray-700">
+        <a href="index.html" class="hover:text-brandBrown transition">Inicio</a>
+        <a href="servicios.html" class="text-brandGreen font-bold border-b-2 border-brandGreen pb-1">Servicios</a>
+        <a href="#" class="hover:text-brandBrown transition">Nosotros</a>
+        <a href="#" class="hover:text-brandBrown transition">Contacto</a>
+      </nav>
+      <a href="#" class="bg-brandGreen text-white px-5 py-2 rounded-lg font-semibold text-sm hover:bg-brandBrown transition">Sucursal Virtual</a>
+    </div>
+  </header>
+
+  <!-- Encabezado de Sección (Verde sólido) -->
+  <section class="bg-brandGreen text-white py-12 px-4">
+    <div class="max-w-7xl mx-auto text-center">
+      <h1 class="text-3xl md:text-4xl font-extrabold">Portafolio de Servicios</h1>
+      <p class="text-green-50 mt-2 max-w-2xl mx-auto">Diseñados para brindar tranquilidad financiera, respaldo y crecimiento continuo a cada uno de nuestros asociados.</p>
+    </div>
+  </section>
+
+  <!-- Contenido Principal de Servicios -->
+  <main class="max-w-7xl mx-auto py-12 px-4">
+    
+    <!-- Filtros de Navegación Visual -->
+    <div class="flex justify-center space-x-2 md:space-x-4 mb-12 overflow-x-auto pb-2">
+      <button class="bg-brandGreen text-white px-6 py-2.5 rounded-full font-bold shadow text-sm whitespace-nowrap">Todos los Servicios</button>
+      <button class="bg-white text-gray-700 hover:text-brandBrown hover:border-brandBrown px-6 py-2.5 rounded-full font-semibold border text-sm whitespace-nowrap transition">Líneas de Crédito</button>
+      <button class="bg-white text-gray-700 hover:text-brandBrown hover:border-brandBrown px-6 py-2.5 rounded-full font-semibold border text-sm whitespace-nowrap transition">Ahorro e Inversión</button>
+      <button class="bg-white text-gray-700 hover:text-brandBrown hover:border-brandBrown px-6 py-2.5 rounded-full font-semibold border text-sm whitespace-nowrap transition">Bienestar y Convenios</button>
+    </div>
+
+    <!-- Rejilla de Portafolio -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Servicio 1: Crédito Educativo -->
+      <div class="bg-white rounded-2xl shadow-sm border overflow-hidden flex flex-col justify-between hover:shadow-md hover:border-brandGreen transition">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <span class="bg-green-50 text-brandGreen text-xs font-bold px-3 py-1 rounded-full">Crédito</span>
+            <i class="fa-solid fa-graduation-cap text-2xl text-brandGreen"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-gray-900">Crédito Educativo</h3>
+          <p class="text-gray-600 text-sm mb-4">Financia tus estudios de pregrado, posgrado o el de tus beneficiarios directos con tasas preferenciales.</p>
+          <ul class="text-xs text-gray-500 space-y-2 mb-6">
+            <li><i class="fa-solid fa-check text-brandGreen mr-2"></i>Aprobación rápida</li>
+            <li><i class="fa-solid fa-check text-brandGreen mr-2"></i>Plazos de 6 a 24 meses</li>
+            <li><i class="fa-solid fa-check text-brandGreen mr-2"></i>Garantía según monto</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-gray-50 border-t flex items-center justify-between">
+          <span class="text-xs text-gray-500">Tasa desde 1.1% Mes Vencido</span>
+          <a href="#" class="bg-brandGreen text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-brandBrown transition">Solicitar</a>
+        </div>
+      </div>
+
+      <!-- Servicio 2: CDAT Progresivo -->
+      <div class="bg-white rounded-2xl shadow-sm border overflow-hidden flex flex-col justify-between hover:shadow-md hover:border-brandBrown transition">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <span class="bg-orange-50 text-brandBrown text-xs font-bold px-3 py-1 rounded-full">Ahorro</span>
+            <i class="fa-solid fa-chart-line text-2xl text-brandBrown"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-gray-900">CDAT Progresivo</h3>
+          <p class="text-gray-600 text-sm mb-4">Invierte a un plazo fijo con rentabilidad garantizada y amparado por el fondo de garantías Fogacoop.</p>
+          <ul class="text-xs text-gray-500 space-y-2 mb-6">
+            <li><i class="fa-solid fa-check text-brandBrown mr-2"></i>Plazos desde 30 hasta 360 días</li>
+            <li><i class="fa-solid fa-check text-brandBrown mr-2"></i>Cero costos de administración</li>
+            <li><i class="fa-solid fa-check text-brandBrown mr-2"></i>Pago de intereses periódico</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-gray-50 border-t flex items-center justify-between">
+          <span class="text-xs text-gray-500">Rentabilidad asegurada</span>
+          <a href="#" class="bg-brandBrown text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-brandGreen transition">Simular CDAT</a>
+        </div>
+      </div>
+
+      <!-- Servicio 3: Libre Inversión -->
+      <div class="bg-white rounded-2xl shadow-sm border overflow-hidden flex flex-col justify-between hover:shadow-md hover:border-brandGreen transition">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <span class="bg-green-50 text-brandGreen text-xs font-bold px-3 py-1 rounded-full">Crédito</span>
+            <i class="fa-solid fa-wallet text-2xl text-brandGreen"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-gray-900">Libre Inversión</h3>
+          <p class="text-gray-600 text-sm mb-4">Liquidez inmediata para viajes, unificación de deudas o imprevistos familiares.</p>
+          <ul class="text-xs text-gray-500 space-y-2 mb-6">
+            <li><i class="fa-solid fa-check text-brandGreen mr-2"></i>Plazo máximo hasta 72 meses</li>
+            <li><i class="fa-solid fa-check text-brandGreen mr-2"></i>Descuento por nómina disponible</li>
+            <li><i class="fa-solid fa-check text-brandGreen mr-2"></i>Sin sanción por prepago</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-gray-50 border-t flex items-center justify-between">
+          <span class="text-xs text-gray-500">Estudio en 24 horas</span>
+          <a href="#" class="bg-brandGreen text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-brandBrown transition">Solicitar</a>
+        </div>
+      </div>
+
+      <!-- Servicio 4: Seguros y Previsión -->
+      <div class="bg-white rounded-2xl shadow-sm border overflow-hidden flex flex-col justify-between hover:shadow-md hover:border-brandBrown transition">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <span class="bg-orange-50 text-brandBrown text-xs font-bold px-3 py-1 rounded-full">Convenios</span>
+            <i class="fa-solid fa-shield-halved text-2xl text-brandBrown"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-gray-900">Seguros y Exequial</h3>
+          <p class="text-gray-600 text-sm mb-4">Protección integral para el grupo familiar con cobertura amplia y tarifas especiales de grupo.</p>
+          <ul class="text-xs text-gray-500 space-y-2 mb-6">
+            <li><i class="fa-solid fa-check text-brandBrown mr-2"></i>Pólizas de vida y vehículos</li>
+            <li><i class="fa-solid fa-check text-brandBrown mr-2"></i>Plan exequial familiar</li>
+            <li><i class="fa-solid fa-check text-brandBrown mr-2"></i>Cargo directo a la cuota</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-gray-50 border-t flex items-center justify-between">
+          <span class="text-xs text-gray-500">Cobertura Nacional</span>
+          <a href="#" class="bg-brandBrown text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-brandGreen transition">Más Información</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Banner de Asesoría Personalizada (Destacado en amarillo) -->
+  <section class="bg-gray-100 border-t border-b py-12 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-gray-900">¿Necesitas asesoría para elegir la mejor opción?</h2>
+      <p class="text-gray-600 my-3 text-sm">Nuestros asesores están disponibles para resolver tus dudas y orientarte en el proceso de solicitud.</p>
+      <a href="#" class="inline-block bg-brandYellow text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-yellow-400 transition shadow-md">
+        <i class="fa-brands fa-whatsapp mr-2"></i>Hablar con un Asesor
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coop San Simón | Tu Cooperativa de Confianza</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandGreen: '#007A33',
+            brandBrown: '#AD6433',
+            brandYellow: '#F3E600',
+            brandBg: '#F8FAFC'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brandBg font-sans text-gray-800">
+
+<!-- Banner de aviso (Amarillo para resaltar) --> 
+<div id="aviso-banner" class="bg-brandYellow text-gray-900 px-4 py-2.5 relative z-50 flex justify-between items-center text-sm shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex w-full justify-center items-center px-8 text-center">
+      <span class="flex items-center flex-col sm:flex-row">
+        <i class="fa-solid fa-bullhorn mr-2 text-lg mb-1 sm:mb-0"></i>
+        <span>
+          <strong>¡Aviso Importante!</strong> A partir del 1 de Noviembre actualizamos nuestro horario de atención y políticas de crédito. 
+          <a href="#" class="underline font-bold ml-1 hover:text-gray-700 transition">Haz clic aquí para leer más</a>.
+        </span>
+      </span>
+    </div>
+    <button onclick="document.getElementById('aviso-banner').style.display='none'" class="absolute right-4 text-gray-900 hover:text-gray-700 transition">
+      <i class="fa-solid fa-xmark text-lg"></i>
+    </button>
+  </div>
+
+  <!-- Topbar Informativa (Marrón para contraste secundario) -->
+  <div class="bg-brandBrown text-white text-xs py-2 px-4 flex justify-between items-center">
+    <div>
+      <span><i class="fa-solid fa-phone mr-1"></i> Línea de atención: (601) 000-0000</span>
+      <span class="ml-4 hidden md:inline"><i class="fa-solid fa-clock mr-1"></i> Lunes a Viernes 8:00 AM - 5:00 PM</span>
+    </div>
+    <div class="flex space-x-3">
+      <a href="#" class="hover:text-brandYellow transition"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" class="hover:text-brandYellow transition"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="hover:text-brandYellow transition"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <!-- Barra de navegación -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+      <!-- Logo (Verde principal) -->
+      <a href="index.html" class="flex items-center space-x-2">
+        <div class="w-10 h-10 bg-brandGreen rounded-full flex items-center justify-center text-white font-bold text-xl">S</div>
+        <span class="text-xl font-extrabold text-brandGreen tracking-tight">Coop San Simón</span>
+      </a>
+
+      <!-- Navegación Principal -->
+      <nav class="hidden md:flex space-x-8 font-medium text-gray-700">
+        <a href="index.html" class="text-brandGreen font-bold border-b-2 border-brandGreen pb-1">Inicio</a>
+        <a href="servicios.html" class="hover:text-brandBrown transition">Servicios</a>
+        <a href="#" class="hover:text-brandBrown transition">Nosotros</a>
+        <a href="#" class="hover:text-brandBrown transition">Educación Cooperativa</a>
+        <a href="#" class="hover:text-brandBrown transition">Contacto</a>
+      </nav>
+
+      <!-- Accesos Rápidos -->
+      <div class="flex space-x-3">
+        <a href="accesoPagos.html" class="bg-gray-100 text-brandBrown px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gray-200 transition border flex items-center">
+          <i class="fa-solid fa-credit-card mr-2 text-brandGreen"></i> PSE
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Verde sólido, sin degradado) -->
+  <section class="relative bg-brandGreen text-white py-20 px-4">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <!-- Etiqueta amarilla para resaltar -->
+        <span class="bg-brandYellow text-gray-900 text-xs font-bold uppercase px-3 py-1 rounded-full mb-4 inline-block">Crecemos Contigo</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">Impulsamos tus proyectos con soluciones financieras a tu medida</h1>
+        <p class="text-lg text-green-50 mb-8">Ahorra con altas tasas de rendimiento, accede a créditos flexibles y disfruta de todos nuestros beneficios de bienestar social.</p>
+        <div class="flex flex-wrap gap-4">
+          <!-- Botón amarillo principal -->
+          <a href="servicios.html" class="bg-brandYellow text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition shadow-lg">Conocer Servicios</a>
+          <!-- Botón transparente que pasa a marrón -->
+          <a href="#" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-brandBrown hover:border-brandBrown transition">Hazte Asociado</a>
+        </div>
+      </div>
+      <!-- Widget Interactivo Rápidos -->
+      <div class="bg-white text-gray-800 p-6 rounded-2xl shadow-2xl">
+        <h3 class="text-xl font-bold mb-4 text-brandGreen border-b-2 border-gray-100 pb-2"><i class="fa-solid fa-calculator text-brandBrown mr-2"></i>Detalles de transacción</h3>
+        <form class="space-y-4" onsubmit="event.preventDefault();">
+          <div>
+            <label class="block text-xs font-bold text-gray-600 mb-1">Monto deseado ($)</label>
+            <input type="number" placeholder="Ej: 5.000.000" class="w-full border rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-brandGreen outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-600 mb-1">Plazo en meses</label>
+            <select class="w-full border rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-brandGreen outline-none">
+              <option>12 Meses</option>
+              <option>24 Meses</option>
+              <option>36 Meses</option>
+              <option>60 Meses</option>
+            </select>
+          </div>
+          <button class="w-full bg-brandGreen text-white py-3 rounded-lg font-bold hover:bg-brandBrown transition shadow">Calcular Cuota Mensual</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<!-- Barra de accesos directos -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 -mt-16 mb-8">
+    <div class="bg-white rounded-xl shadow-lg border border-gray-100 p-6 flex flex-wrap justify-between md:justify-around items-center gap-4">
+      <a href="" class="flex flex-col items-center group min-w-[100px]">
+        <div class="w-14 h-14 bg-gray-50 text-brandGreen group-hover:bg-brandGreen group-hover:text-white rounded-full flex items-center justify-center text-2xl transition-all shadow-sm mb-3">
+          <i class="fa-solid fa-file-invoice-dollar"></i>
+        </div>
+        <span class="text-sm font-bold text-gray-700 group-hover:text-brandGreen transition">Sin funcionalidad</span>
+      </a>
+      <a href="#" class="flex flex-col items-center group min-w-[100px]">
+        <div class="w-14 h-14 bg-gray-50 text-brandGreen group-hover:bg-brandGreen group-hover:text-white rounded-full flex items-center justify-center text-2xl transition-all shadow-sm mb-3">
+          <i class="fa-solid fa-file-signature"></i>
+        </div>
+        <span class="text-sm font-bold text-gray-700 group-hover:text-brandGreen transition">Solicitar Crédito</span>
+      </a>
+      <a href="#" class="flex flex-col items-center group min-w-[100px]">
+        <div class="w-14 h-14 bg-gray-50 text-brandGreen group-hover:bg-brandGreen group-hover:text-white rounded-full flex items-center justify-center text-2xl transition-all shadow-sm mb-3">
+          <i class="fa-solid fa-user-pen"></i>
+        </div>
+      <span class="text-sm font-bold text-gray-700 group-hover:text-brandGreen transition">Actualizar Datos</span>
+      </a>
+      <!-- Un detalle marrón para balancear -->
+      <a href="#" class="flex flex-col items-center group min-w-[100px]">
+        <div class="w-14 h-14 bg-gray-50 text-brandGreen group-hover:bg-brandGreen group-hover:text-white rounded-full flex items-center justify-center text-2xl transition-all shadow-sm mb-3">
+          <i class="fa-solid fa-file-pdf"></i>
+        </div>
+        <span class="text-sm font-bold text-gray-700 group-hover:text-brandGreen transition">Extractos</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Secciones Destacadas -->
+  <section class="max-w-7xl mx-auto py-16 px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900">¿Por qué elegir San Simón?</h2>
+      <p class="text-gray-600 mt-2">Beneficios pensados para el bienestar de nuestros asociados y sus familias.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-xl shadow-sm border hover:shadow-md hover:border-brandGreen transition">
+        <div class="w-12 h-12 bg-gray-50 text-brandGreen rounded-lg flex items-center justify-center text-2xl mb-4">
+          <i class="fa-solid fa-piggy-bank"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Ahorro e Inversión</h3>
+        <p class="text-gray-600 text-sm">Asegura tu futuro con tasas altamente competitivas en CDAT y planes de ahorro programado.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow-sm border hover:shadow-md hover:border-brandGreen transition">
+        <div class="w-12 h-12 bg-gray-50 text-brandGreen rounded-lg flex items-center justify-center text-2xl mb-4">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Créditos de Libre Inversión</h3>
+        <p class="text-gray-600 text-sm">Financiación ágil con tasas preferenciales para educación, vivienda o libre destinación.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow-sm border hover:shadow-md hover:border-brandBrown transition">
+        <div class="w-12 h-12 bg-gray-50 text-brandBrown rounded-lg flex items-center justify-center text-2xl mb-4">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Bienestar Social</h3>
+        <p class="text-gray-600 text-sm">Convenios en salud, recreación, auxilio educativo y auxilios de solidaridad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Gris muy oscuro para darle peso, con títulos amarillos y toques verdes/marrones) -->
+  <footer class="bg-gray-900 text-gray-300 py-12 border-t-4 border-brandGreen">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+      <div>
+        <h4 class="text-brandGreen font-extrabold text-xl mb-4">Coop San Simón</h4>
+        <p class="text-sm text-gray-400">Vigilado Superintendencia de la Economía Solidaria. Inscrito a Fogacoop.</p>
+      </div>
+      <div>
+        <h5 class="text-brandYellow font-semibold mb-3">Accesos Rápidos</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white transition">Sucursal Virtual</a></li>
+          <li><a href="#" class="hover:text-white transition">Pago PSE</a></li>
+          <li><a href="#" class="hover:text-white transition">Estatutos y Transparencia</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-brandYellow font-semibold mb-3">Servicios</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white transition">Líneas de Crédito</a></li>
+          <li><a href="#" class="hover:text-white transition">CDAT / Inversión</a></li>
+          <li><a href="#" class="hover:text-white transition">Convenios y Seguros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-brandYellow font-semibold mb-3">Contacto</h5>
+        <p class="text-sm text-gray-400 mb-1"><i class="fa-solid fa-location-dot text-brandBrown mr-2"></i>Sede Principal</p>
+        <p class="text-sm text-gray-400"><i class="fa-solid fa-envelope text-brandBrown mr-2"></i>contacto@coopsansimon.com</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+
