@@ -14,6 +14,9 @@
             brandGreen: '#00875A',
             brandDarkGreen: '#005C3E',
             brandGold: '#F5A623',
+            brandBg: '#F8FAFC',
+            brandBrown: '#AD6433',
+            brandYellow: '#F3E600',
             brandBg: '#F8FAFC'
           }
         }
@@ -23,24 +26,12 @@
 </head>
 <body class="bg-brandBg font-sans text-gray-800 flex flex-col min-h-screen">
 
-  <!-- Topbar Informativa -->
-  <div class="bg-brandDarkGreen text-white text-xs py-2 px-4 flex justify-between items-center">
-    <div>
-      <span><i class="fa-solid fa-phone mr-1"></i> Línea de atención: (601) 000-0000</span>
-      <span class="ml-4 hidden md:inline"><i class="fa-solid fa-clock mr-1"></i> Lunes a Viernes 8:00 AM - 5:00 PM</span>
-    </div>
-    <div class="flex space-x-3">
-      <a href="#" class="hover:text-brandGold transition"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#" class="hover:text-brandGold transition"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" class="hover:text-brandGold transition"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
-  </div>
 
-  <!-- Navbar -->
+  <!-- Barra de navegación -->
   <header class="bg-white shadow-sm sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
       <!-- Logo -->
-      <a href="index.html" class="flex items-center space-x-2">
+        <a href="index.html" class="flex items-center space-x-2">
         <div class="w-10 h-10 bg-brandYellow rounded-full flex items-center justify-center text-green-800 font-bold text-xl">S</div>
         <span class="text-xl font-extrabold text-brandGreen tracking-tight">Cooperativa San Simón</span>
       </a>
@@ -53,10 +44,10 @@
         <a href="#" class="hover:text-brandGreen transition">Educación Cooperativa</a>
         <a href="#" class="hover:text-brandGreen transition">Contacto</a>
       </nav>
-
+   
       <!-- Accesos Rápidos -->
       <div class="flex space-x-3">
-        <a href="index.html" class="bg-gray-100 text-gray-600 px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gray-200 transition border flex items-center">
+        <a href="accesoPagos.html" class="bg-gray-100 text-gray-600 px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gray-200 transition border flex items-center">
           <i class="fa-solid fa-arrow-left mr-2"></i> Volver
         </a>
       </div>
@@ -92,6 +83,8 @@
               <option>Cédula de Ciudadanía</option>
               <option>Cédula de Extranjería</option>
               <option>NIT</option>
+              <option>Pasaporte</option>
+              <option>Visa</option>
             </select>
           </div>
           <!-- Número de Documento -->
@@ -123,7 +116,7 @@
             <i class="fa-solid fa-magnifying-glass mr-2"></i> Consultar cuenta
           </button>
           <!-- Botón de PSE directo -->
-          <a href="#" class="w-full sm:w-auto bg-gray-100 text-gray-700 px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition border flex items-center justify-center">
+          <a href="https://www.psepagos.co/PSEHostingUI/ShowTicketOffice.aspx?ID=12274" class="w-full sm:w-auto bg-gray-100 text-gray-700 px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition border flex items-center justify-center">
             Pagar directo con PSE
           </a>
         </div>
@@ -152,7 +145,7 @@
         <div class="flex justify-center space-x-4 mb-4">
           <div class="w-16 h-12 bg-gray-100 rounded flex items-center justify-center font-bold text-gray-500 border">PSE</div>
           <div class="w-16 h-12 bg-gray-100 rounded flex items-center justify-center font-bold text-gray-500 border"><i class="fa-brands fa-cc-visa text-2xl"></i></div>
-          <div class="w-16 h-12 bg-gray-100 rounded flex items-center justify-center font-bold text-gray-500 border"><i class="fa-brands fa-cc-mastercard text-2xl"></i></div>
+          <div class="w-16 h-12 bg-gray-100 rounded flex items-center justify-center font-bold text-gray-500 border"><i class="fa-brands fa-cc-mastercard text-3x2"></i></div>
         </div>
         <p class="text-xs text-gray-500">Los pagos pueden tardar hasta 24 horas hábiles en verse reflejados en tu estado de cuenta.</p>
       </div>

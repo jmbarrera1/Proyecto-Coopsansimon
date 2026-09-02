@@ -39,11 +39,11 @@
     </button>
   </div>
 
-  <!-- Topbar Informativa (Marrón para contraste secundario) -->
+  <!-- Topbar Informativa -->
   <div class="bg-brandBrown text-white text-xs py-2 px-4 flex justify-between items-center">
     <div>
       <span><i class="fa-solid fa-phone mr-1"></i> Línea de atención: (601) 000-0000</span>
-      <span class="ml-4 hidden md:inline"><i class="fa-solid fa-clock mr-1"></i> Lunes a Viernes 8:00 AM - 5:00 PM</span>
+      <span class="ml-4 hidden md:inline"><i class="fa-solid fa-clock mr-1"></i> Lunes a Viernes 8:00 AM - 4:00 PM</span>
     </div>
     <div class="flex space-x-3">
       <a href="#" class="hover:text-brandYellow transition"><i class="fa-brands fa-facebook-f"></i></a>
@@ -85,18 +85,18 @@
     <!-- Slides Container -->
     <div id="hero-slider" class="absolute inset-0 w-full h-full">
       <!-- Slide 1 -->
-      <div class="slide absolute inset-0 w-full h-full opacity-30 transition-opacity duration-2000 ease-in-out bg-cover bg-center" style="background-image: url('ImagenesCoopSansimon/FamiliaCoop1111.png');">
+      <div class="slide absolute inset-0 w-full h-full opacity-1000 transition-opacity duration-6000 ease-in-out bg-cover bg-center" style="background-image: url('ImagenesCoopSansimon/FamiliaCoop.png');">
         <div class="absolute inset-0 bg-gradient-to-r from-brandGreen via-brandGreen/110 to-brandGreen/120"></div>
       </div>
 
       <!-- Slide 2 -->
-      <div class="slide absolute inset-0 w-full h-full opacity-1 transition-opacity duration-2000 ease-in-out bg-over bg-center" style="background-image: url('ImagenesCoopSansimon/FamiliaCoopPrueba.png');">
-        <div class="absolute inset-0 bg-gradient-to-r from-brandGreen via-brandGreen/110 to-brandGreen/160"></div>
+      <div class="slide absolute inset-0 w-full h-full opacity-1000 transition-opacity duration-6000 ease-in-out bg-over bg-center" style="background-image: url('ImagenesCoopSansimon/PublicidadPSE.png');">
+        <div class="absolute inset-0 bg-gradient-to-r from-brandGreen via-brandGreen/110 to-brandGreen/120"></div>
       </div>
 
       <!-- Slide 3 -->
-      <div class="slide absolute inset-0 w-full h-full opacity-1000 transition-opacity duration-2000 ease-in-out bg-cover bg-center" flex items-top style="background-image: url('ImagenesCoopSansimon/PublicidadPSE.png');">
-        <div class="absolute inset-0 bg-gradient-to-r from-brandGreen via-brandGreen/110 to-brandGreen/120"></div>
+      <div class="slide absolute inset-0 w-full h-full opacity-1000 transition-opacity duration-6000 ease-in-out bg-cover bg-center" style="background-image: url('ImagenesCoopSansimon/CanalesOficialesTest.png');">
+        <div class="absolute inset-0 bg-gradient-to-r from-brandGreen via-brandGreen/110 to-brandGreen/110"></div>
       </div>   
     </div>
 
@@ -129,11 +129,11 @@
 
         <!-- Contenido Slide 3 -->
         <div class="slide-text transition-all duration-700 hidden">
-          <span class="bg-brandYellow text-gray-900 text-xs font-bold uppercase px-3 py-1 rounded-full mb-4 inline-block">Métodos de pago</span>
+          <span class="bg-brandYellow text-gray-900 text-xs font-bold uppercase px-3 py-1 rounded-full mb-4 inline-block">Medios de comunicación oficiales</span>
           <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">En la Cooperativa Sansimon</h1>
           <p class="text-lg text-green-50 mb-8">Accede a convenios en salud, educación y actividades recreativas exclusivas.</p>
           <div class="flex flex-wrap gap-4">
-            <a href="#" class="bg-brandYellow text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition shadow-lg">Ver Convenios</a>
+            <a href="#" class="bg-brandYellow text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition shadow-lg">Canales autorizados</a>
           </div>
         </div>
       </div>
@@ -217,7 +217,7 @@
         <p class="text-gray-600 text-sm">Convenios en salud, recreación, auxilio educativo y auxilios de solidaridad.</p>
       </div>
     </div>
-  </section>
+  </section> 
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-300 py-12 border-t-4 border-brandGreen">
@@ -295,7 +295,7 @@
     }
 
     function startAutoplay() {
-      slideInterval = setInterval(nextSlide, 9000);
+      slideInterval = setInterval(nextSlide, 6000);
     }
 
     function stopAutoplay() {
@@ -312,7 +312,7 @@
         startAutoplay();
       });
     });
-
+    showSlide(0);
     startAutoplay();
   </script>
 
