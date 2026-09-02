@@ -23,8 +23,8 @@
 </head>
 <body class="bg-brandBg font-sans text-gray-800">
 
-<!-- Banner de aviso (Amarillo para resaltar) --> 
-<div id="aviso-banner" class="bg-brandYellow text-gray-900 px-4 py-2.5 relative z-50 flex justify-between items-center text-sm shadow-sm transition-all duration-300">
+  <!-- Banner de aviso (Amarillo para resaltar) --> 
+  <div id="aviso-banner" class="bg-brandYellow text-gray-900 px-4 py-2.5 relative z-50 flex justify-between items-center text-sm shadow-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto flex w-full justify-center items-center px-8 text-center">
       <span class="flex items-center flex-col sm:flex-row">
         <i class="fa-solid fa-bullhorn mr-2 text-lg mb-1 sm:mb-0"></i>
@@ -57,8 +57,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
       <!-- Logo (Verde principal) -->
       <a href="index.html" class="flex items-center space-x-2">
-        <div class="w-10 h-10 bg-brandGreen rounded-full flex items-center justify-center text-white font-bold text-xl">S</div>
-        <span class="text-xl font-extrabold text-brandGreen tracking-tight">Coop San Simón</span>
+        <div class="w-10 h-10 bg-brandYellow rounded-full flex items-center justify-center text-green-800 font-bold text-xl">S</div>
+        <span class="text-xl font-extrabold text-brandGreen tracking-tight">Cooperativa San Simón</span>
       </a>
 
       <!-- Navegación Principal -->
@@ -79,46 +79,84 @@
     </div>
   </header>
 
-  <!-- Hero Section (Verde sólido, sin degradado) -->
-  <section class="relative bg-brandGreen text-white py-20 px-4">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <!-- Etiqueta amarilla para resaltar -->
-        <span class="bg-brandYellow text-gray-900 text-xs font-bold uppercase px-3 py-1 rounded-full mb-4 inline-block">Crecemos Contigo</span>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">Impulsamos tus proyectos con soluciones financieras a tu medida</h1>
-        <p class="text-lg text-green-50 mb-8">Ahorra con altas tasas de rendimiento, accede a créditos flexibles y disfruta de todos nuestros beneficios de bienestar social.</p>
-        <div class="flex flex-wrap gap-4">
-          <!-- Botón amarillo principal -->
-          <a href="servicios.html" class="bg-brandYellow text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition shadow-lg">Conocer Servicios</a>
-          <!-- Botón transparente que pasa a marrón -->
-          <a href="#" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-brandBrown hover:border-brandBrown transition">Hazte Asociado</a>
+  <!-- Hero Slider Section -->
+  <section class="relative bg-brandGreen text-white overflow-hidden py-16 md:py-24 px-4 min-h-[600px] flex items-center">
+    
+    <!-- Slides Container -->
+    <div id="hero-slider" class="absolute inset-0 w-full h-full">
+      <!-- Slide 1 -->
+      <div class="slide absolute inset-0 w-full h-full opacity-30 transition-opacity duration-2000 ease-in-out bg-cover bg-center" style="background-image: url('ImagenesCoopSansimon/FamiliaCoop1111.png');">
+        <div class="absolute inset-0 bg-gradient-to-r from-brandGreen via-brandGreen/110 to-brandGreen/120"></div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide absolute inset-0 w-full h-full opacity-1 transition-opacity duration-2000 ease-in-out bg-over bg-center" style="background-image: url('ImagenesCoopSansimon/FamiliaCoopPrueba.png');">
+        <div class="absolute inset-0 bg-gradient-to-r from-brandGreen via-brandGreen/110 to-brandGreen/160"></div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide absolute inset-0 w-full h-full opacity-1000 transition-opacity duration-2000 ease-in-out bg-cover bg-center" flex items-top style="background-image: url('ImagenesCoopSansimon/PublicidadPSE.png');">
+        <div class="absolute inset-0 bg-gradient-to-r from-brandGreen via-brandGreen/110 to-brandGreen/120"></div>
+      </div>   
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10 w-full">
+      
+      <!-- Textos Dinámicos por Slide -->
+      <div class="relative min-h-[280px] flex items-center">
+        <!-- Contenido Slide 1 -->
+        <div class="slide-text active-text transition-all duration-700 block">
+          <span class="bg-brandYellow text-gray-900 text-xs font-bold uppercase px-3 py-1 rounded-full mb-4 inline-block">Crecemos Contigo</span>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">Impulsamos tus proyectos con soluciones a tu medida</h1>
+          <p class="text-lg text-green-50 mb-8">Ahorra con altas tasas de rendimiento, accede a créditos flexibles y disfruta de nuestros beneficios de bienestar.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="servicios.html" class="bg-brandYellow text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition shadow-lg">Conocer Servicios</a>
+            <a href="#" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-brandBrown hover:border-brandBrown transition">Hazte Asociado</a>
+          </div>
+        </div>
+
+        <!-- Contenido Slide 2 -->
+        <div class="slide-text transition-all duration-700 hidden">
+          <span class="bg-brandYellow text-gray-900 text-xs font-bold uppercase px-3 py-1 rounded-full mb-4 inline-block">Ahorro e Inversión</span>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">Haz crecer tu dinero con nuestros CDAT preferenciales</h1>
+          <p class="text-lg text-green-50 mb-8">Rentabilidad garantizada y plazos adaptados a tus metas financieras.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="servicios.html" class="bg-brandYellow text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition shadow-lg">Ver Tasas</a>
+            <a href="#" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-brandBrown hover:border-brandBrown transition">Simular Ahorro</a>
+          </div>
+        </div>
+
+        <!-- Contenido Slide 3 -->
+        <div class="slide-text transition-all duration-700 hidden">
+          <span class="bg-brandYellow text-gray-900 text-xs font-bold uppercase px-3 py-1 rounded-full mb-4 inline-block">Métodos de pago</span>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">En la Cooperativa Sansimon</h1>
+          <p class="text-lg text-green-50 mb-8">Accede a convenios en salud, educación y actividades recreativas exclusivas.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#" class="bg-brandYellow text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition shadow-lg">Ver Convenios</a>
+          </div>
         </div>
       </div>
-      <!-- Widget Interactivo Rápidos -->
-      <div class="bg-white text-gray-800 p-6 rounded-2xl shadow-2xl">
-        <h3 class="text-xl font-bold mb-4 text-brandGreen border-b-2 border-gray-100 pb-2"><i class="fa-solid fa-calculator text-brandBrown mr-2"></i>Detalles de transacción</h3>
-        <form class="space-y-4" onsubmit="event.preventDefault();">
-          <div>
-            <label class="block text-xs font-bold text-gray-600 mb-1">Monto deseado ($)</label>
-            <input type="number" placeholder="Ej: 5.000.000" class="w-full border rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-brandGreen outline-none">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-gray-600 mb-1">Plazo en meses</label>
-            <select class="w-full border rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-brandGreen outline-none">
-              <option>12 Meses</option>
-              <option>24 Meses</option>
-              <option>36 Meses</option>
-              <option>60 Meses</option>
-            </select>
-          </div>
-          <button class="w-full bg-brandGreen text-white py-3 rounded-lg font-bold hover:bg-brandBrown transition shadow">Calcular Cuota Mensual</button>
-        </form>
-      </div>
+      
+
+    <!-- Botones de Navegación del Carrusel -->
+    <button id="prev-slide" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button id="next-slide" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Indicadores -->
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
+      <button class="dot w-3 h-3 rounded-full bg-brandYellow transition-all"></button>
+      <button class="dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all"></button>
+      <button class="dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all"></button>
     </div>
   </section>
 
-<!-- Barra de accesos directos -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 -mt-16 mb-8">
+  <!-- Barra de accesos directos -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 -mt-16 mb-8">
     <div class="bg-white rounded-xl shadow-lg border border-gray-100 p-6 flex flex-wrap justify-between md:justify-around items-center gap-4">
       <a href="" class="flex flex-col items-center group min-w-[100px]">
         <div class="w-14 h-14 bg-gray-50 text-brandGreen group-hover:bg-brandGreen group-hover:text-white rounded-full flex items-center justify-center text-2xl transition-all shadow-sm mb-3">
@@ -138,7 +176,6 @@
         </div>
       <span class="text-sm font-bold text-gray-700 group-hover:text-brandGreen transition">Actualizar Datos</span>
       </a>
-      <!-- Un detalle marrón para balancear -->
       <a href="#" class="flex flex-col items-center group min-w-[100px]">
         <div class="w-14 h-14 bg-gray-50 text-brandGreen group-hover:bg-brandGreen group-hover:text-white rounded-full flex items-center justify-center text-2xl transition-all shadow-sm mb-3">
           <i class="fa-solid fa-file-pdf"></i>
@@ -182,11 +219,11 @@
     </div>
   </section>
 
-  <!-- Footer (Gris muy oscuro para darle peso, con títulos amarillos y toques verdes/marrones) -->
+  <!-- Footer -->
   <footer class="bg-gray-900 text-gray-300 py-12 border-t-4 border-brandGreen">
     <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
       <div>
-        <h4 class="text-brandGreen font-extrabold text-xl mb-4">Coop San Simón</h4>
+        <h4 class="text-brandYellow font-semibold text-xl mb-6">Cooperativa San Simón</h4>
         <p class="text-sm text-gray-400">Vigilado Superintendencia de la Economía Solidaria. Inscrito a Fogacoop.</p>
       </div>
       <div>
@@ -207,12 +244,77 @@
       </div>
       <div>
         <h5 class="text-brandYellow font-semibold mb-3">Contacto</h5>
-        <p class="text-sm text-gray-400 mb-1"><i class="fa-solid fa-location-dot text-brandBrown mr-2"></i>Sede Principal</p>
+        <p class="text-sm text-gray-400 mb-1"><i class="fa-solid fa-location-dot text-brandBrown mr-2"></i>Sede Principal: Cra 2a #14a-02 B <br> Santa Librada, Ibagué, Tolima</p>
         <p class="text-sm text-gray-400"><i class="fa-solid fa-envelope text-brandBrown mr-2"></i>contacto@coopsansimon.com</p>
       </div>
     </div>
   </footer>
+
+  <!-- Script de Control del Slider -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const slideTexts = document.querySelectorAll('.slide-text');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.getElementById('prev-slide');
+    const nextBtn = document.getElementById('next-slide');
+    let currentIndex = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('opacity-100', i === index);
+        slide.classList.toggle('opacity-0', i !== index);
+      });
+
+      slideTexts.forEach((text, i) => {
+        if (i === index) {
+          text.classList.remove('hidden');
+          text.classList.add('block');
+        } else {
+          text.classList.add('hidden');
+          text.classList.remove('block');
+        }
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('bg-brandYellow', i === index);
+        dot.classList.toggle('bg-white/50', i !== index);
+      });
+
+      currentIndex = index;
+    }
+
+    function nextSlide() {
+      let next = (currentIndex + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function prevSlide() {
+      let prev = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    }
+
+    function startAutoplay() {
+      slideInterval = setInterval(nextSlide, 9000);
+    }
+
+    function stopAutoplay() {
+      clearInterval(slideInterval);
+    }
+
+    nextBtn.addEventListener('click', () => { nextSlide(); stopAutoplay(); startAutoplay(); });
+    prevBtn.addEventListener('click', () => { prevSlide(); stopAutoplay(); startAutoplay(); });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        stopAutoplay();
+        startAutoplay();
+      });
+    });
+
+    startAutoplay();
+  </script>
+
 </body>
 </html>
-
-
